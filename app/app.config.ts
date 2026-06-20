@@ -1,8 +1,8 @@
 export default defineAppConfig({
-	ui: {
-		colors: {
-			primary: "mine-shaft",
-			neutral: "taupe",
-		},
-	},
-});
+  ui: {
+    colors: {
+      primary: 'mine-shaft',
+      neutral: 'taupe'
+    }
+  }
+})

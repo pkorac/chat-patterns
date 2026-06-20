@@ -2,12 +2,7 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
-    '@nuxt/ui',
-    '@comark/nuxt',
-    '@nuxthub/core',
-    'nuxt-auth-utils',
-    'nuxt-charts',
-    'nuxt-csurf'
+    '@nuxt/ui'
   ],
 
   devtools: {
@@ -16,28 +11,14 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  experimental: {
-    viewTransition: true
+  // The experience is designed light; force it so the embedded iframe is
+  // consistent regardless of the viewer's system theme.
+  colorMode: {
+    preference: 'light',
+    fallback: 'light'
   },
 
   compatibilityDate: '2024-07-11',
-
-  nitro: {
-    experimental: {
-      openAPI: true
-    }
-  },
-
-  hub: {
-    db: 'sqlite',
-    blob: true
-  },
-
-  vite: {
-    optimizeDeps: {
-      include: ['striptags']
-    }
-  },
 
   eslint: {
     config: {
